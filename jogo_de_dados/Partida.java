@@ -1,3 +1,6 @@
+package jogo_de_dados;
+
+import java.util.Date;
 import java.util.Calendar;
 
 public class Partida {
