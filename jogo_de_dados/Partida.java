@@ -18,7 +18,7 @@ public class Partida {
         }
     }
 
-    public Jogador getJogador(){
+    public Jogador[] getJogador(){
         return this.jogadores;
     }
 
