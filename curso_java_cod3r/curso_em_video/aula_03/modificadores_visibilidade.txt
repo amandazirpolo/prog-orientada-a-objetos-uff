@@ -1,0 +1,20 @@
+o que é visibilidade?
+- indica o nível de acesso aos componentes internos de uma classe
+
+quais são os componentes internos de uma classe?
+- métodos
+- atributos
+
+existem tres formas de representar visibilidade:
+- public, representado pelo simbolo + {publico}
+- private, representado pelo símbolo - {privado}
+- protected, representado pelo símbolo # {protegido}
+
+* todo objeto definido como publico permite que a classe atual
+e todas as demais classes possam acessá-lo
+
+* todo objeto definido como privado permite que somente a classe
+atual o acesse
+
+* todo objeto definido como protegido permite que somente a classe
+atual e as suas subclasses possam acessá-lo (conceito de herança)

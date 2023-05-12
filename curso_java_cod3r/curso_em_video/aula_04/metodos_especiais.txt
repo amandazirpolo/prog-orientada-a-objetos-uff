@@ -1,0 +1,21 @@
+métodos especiais: get, set e construtor
+
+o que são os métodos especiais?
+- métodos acessores: dão acesso a determinada coisa. pega/acessa 
+alguma informação, ou seja, retornam um valor - {get}
+
+- métodos modificadores: modificam coisas que estão dentro do atributo.
+trocam/inserem um valor dentro do atributo - {set}
+normalmente os métodos set possuem parâmetros, que serão utilizados para
+serem atribuídos ao atributo pelo método
+
+- método construtor: inicializam uma classe, ou seja, iniciam um atributo
+automaticamente, sem que o usuário tenha que utilizar um método para isso
+os construtores podem receber parâmetros. possuem o mesmo nome da classe
+em que foram instanciados
+
+cada atributo deve possuir um get e um set
+
+a vantagem desses métodos é que eles garantem a segurança das informações,
+ou seja, não permitem que os valores sejam alterados/visualizados por qualquer
+classe e em qualquer lugar

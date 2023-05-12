@@ -1,3 +1,5 @@
+package conceitos_iniciais_java;
+
 public class tipos_basicos {
     public static void main(String[] args) {
         // informações do funcionario

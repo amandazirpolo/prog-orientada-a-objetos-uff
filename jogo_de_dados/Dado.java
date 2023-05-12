@@ -10,11 +10,8 @@ public class Dado {
         valorDeFace = rolar.nextInt(6);
         return valorDeFace;
     }
-
-    public int soma(int dado1, int dado2){
-        return dado1 + dado2;
-    }
     
+    /*pega o valor da face do dado */
     public int getValorDeFace(){
         return this.valorDeFace;
     }

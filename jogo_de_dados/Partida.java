@@ -1,31 +1,33 @@
 package jogo_de_dados;
 
-import java.util.Date;
-import java.util.Calendar;
-
 public class Partida {
     /*permite que o código acesse informações reais de data e hora da máquina */
-    private Date data;
-    private Jogador[] jogadores = new Jogador[10];
+    private Jogador[] jogadores = new Jogador[3];
+    private int contador = 0;
+    private int numPartida;
 
     /*construtor - executa a classe sem ter que chamar*/
-    public Partida(){
-        data = Calendar.getInstance(null, null).getTime();
+    public Partida(int numPartida){
+        this.numPartida = numPartida;
+    }
+
+    public int getNumPartida(){
+        return this.numPartida;
     }
 
     public void addJogador(Jogador jogador){
-        for(int i = 0; i < jogadores.length; i++){
-            if(jogadores[i] == null){
-                jogadores[i] = jogador;
-            }
+        if(contador < jogadores.length){
+            jogadores[contador] = jogador;
+            this.contador++;
         }
+    }
+
+    public void resetPartida(){
+        this.contador = 0;
     }
 
     public Jogador[] getJogador(){
         return this.jogadores;
     }
-
-    public Date getData(){
-        return this.data;
-    }
 }
+
