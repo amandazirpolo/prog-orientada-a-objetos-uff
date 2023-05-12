@@ -1,10 +1,9 @@
-package heranca_interface;
-
+package amanda;
 public class No {
-    public int info;
+    public Integer info;
     public No prox;
 
-    public ListaEncadeadaTeste(){
+    public No(){
         this.info = null;
         this.prox = null;
     }

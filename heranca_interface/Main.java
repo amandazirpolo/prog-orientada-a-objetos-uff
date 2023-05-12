@@ -6,13 +6,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         Operacoes colecao = null;
+        int op;
 
         /* criando os objetos da lista encadeada, do vetor e do menu */
         Menu menu = new Menu();
 
         try {
-            System.out.println("deseja operar com lista encadeada ou vetor?");
-            int op = teclado.nextInt();
+            do {
+                System.out.println("deseja operar com lista encadeada ou vetor?");
+                op = teclado.nextInt();
+            }while (op != 1 && op != 2);
+
             if(op == 1) {
                 colecao = new ListaEncadeada();
             }

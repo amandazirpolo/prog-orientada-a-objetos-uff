@@ -3,12 +3,13 @@ package heranca_interface;
 import java.util.*;
 
 public class ListaEncadeada implements Operacoes {
-    private No no = new No();
+    private No no = null;
     
     public void insere(int elemento){
         No novo = new No();
         novo.info = elemento;
-        novo.prox = null;
+        novo.prox = no;
+        no = novo;
     }
 
     public int busca(int elemento){
@@ -66,10 +67,10 @@ public class ListaEncadeada implements Operacoes {
     public void imprime(){
         No aux = no;
         while(aux != null){
-            System.out.printf("%d -> ", aux.info);
+            System.out.print(aux.info + " -> ");
             aux = aux.prox;
         }
-        System.out.printf("NULL \n");
+        System.out.println("NULL");
     }
 
 }
