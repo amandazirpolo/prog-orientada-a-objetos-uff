@@ -1,5 +1,5 @@
 import java.io.BufferedReader;
-import java.io.FileReader;
+// import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.io.File;
@@ -8,21 +8,44 @@ public class Pedido {
     
     ArrayList<Item> vetorPedidos = new ArrayList<Item>();
     File arquivo;
+    Pedido pedido;
 
     public Pedido(File arquivo){
         this.arquivo = arquivo;
     }
 
-    public void preencheArquivo(File arquivo) throws IOException {
+    public Pedido getPedido(){
+        return this.pedido;
+    }
+
+    public ArrayList<Item> getVetorPedidos() {
+        return this.vetorPedidos;
+    }
+
+    // public void percorre(){
+    //     Pedido aux = this.pedido;
+    //     while(aux.getPedido() != null){
+    //         System.out.println(aux.getVetorPedidos());
+    //         aux = aux.getPedido();
+    //     }
+    // }
+
+    public void preencheArquivo(File arquivo, BufferedReader leitor) throws IOException {
         try {
-            BufferedReader leitor = new BufferedReader(new FileReader(arquivo));
             String linha;
             while((linha = leitor.readLine()) != null){
-                String[] separa = linha.split("-");
-                Item aux = new Item(new Prato(separa[0], Double.parseDouble(separa[2])), Integer.parseInt(separa[1]));
-                vetorPedidos.add(aux);
+                // if(linha != "/"){
+                    String[] separa = linha.split("-");
+                    Item aux = new Item(new Prato(separa[0], Double.parseDouble(separa[2])), Integer.parseInt(separa[1]));
+                    vetorPedidos.add(aux);
+                // } else {
+                //     leitor.readLine(); // pula a barra
+                //     preencheArquivo(arquivo, leitor);
+                // }
             }
-            leitor.close();
+            // if(leitor.readLine() == null){
+            //     this.pedido = null;
+            // }
         } catch(IOException e){
             System.out.println("não foi possível abrir o arquivo, tente novamente.");
         }
